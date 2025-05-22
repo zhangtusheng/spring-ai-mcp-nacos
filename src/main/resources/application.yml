@@ -1,0 +1,19 @@
+spring:
+  ai:
+    mcp:
+      server:
+        name: spring-ai-alibaba-demo
+        version: 1.0.0
+        type: SYNC
+        sse-message-endpoint: /spring-ai-alibaba-demo/message
+    alibaba:
+      mcp:
+        nacos:
+          enabled: true
+          server-addr: 127.0.0.1:8848
+          service-namespace: public    # Nacos 命名空间 ID
+          service-group: DEFAULT_GROUP
+          username: nacos
+          password: nacos
+server:
+  port: 8081
